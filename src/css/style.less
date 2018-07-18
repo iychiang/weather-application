@@ -1,0 +1,90 @@
+body {
+  background-color: aliceblue;
+}
+
+.row {
+  margin-top: 2em;
+}
+
+.img-container {
+  min-height: 4em;
+  text-align: center;
+}
+
+.btn-group li+li:not(:last-of-type) button {
+  border-radius: 0;
+  border-left: none;
+}
+
+.btn-group li:first-of-type button {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.btn-group li:last-of-type button {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-left: none;
+}
+
+.btn-outline-info {
+  background: white;
+}
+
+.jumbotron {
+  margin-top: 1em;
+  padding: 2em 2em;
+}
+
+.stats-container {
+  text-align: center;
+  font-weight: 100;
+  .card-body {
+    background: white;
+  }
+}
+
+.weather-description {
+  text-align: center;
+  font-weight: 100;
+  margin: 1em;
+}
+
+.card-text {
+  font-weight: bold;
+  text-align: center;
+   p {
+     font-weight: 100;
+  }
+}
+
+.jumbotron {
+  background-color: #fff6de;
+}
+
+.lead {
+  font-weight: 250;
+  margin-top: 1em;
+}
+
+
+.form-control {
+  color: black;
+
+  &:focus {
+    color: black;
+  }
+}
+
+.datetime {
+  font-size: 0.8em;
+}
+
+.searchhistory {
+  font-size: 0.9em;
+  padding: 0.5em;
+
+  &:nth-child(odd) {
+    background: #fffbf1;
+  }
+}
