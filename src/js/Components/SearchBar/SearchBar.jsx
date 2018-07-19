@@ -1,5 +1,5 @@
 import React from 'react';
-import { updateSearchInput, preloadCity, getSearchResults, handleHistory } from './searchBarActions';
+import { updateSearchInput, getSearchResults, handleHistory } from './searchBarActions';
 
 export default class SearchBar extends React.Component {
   constructor(props) {
@@ -19,13 +19,18 @@ export default class SearchBar extends React.Component {
   handlePreloadedCity(e) {
     const { dispatch } = this.props;
     const { value } = e.target;
-    dispatch(preloadCity(value));
+    dispatch(getSearchResults(value))
+      .then(res => {
+        if (res) {
+          dispatch(handleHistory(value));
+        }
+      })
   }
 
   getSearchResults() {
     const { dispatch, input } = this.props;
     dispatch(getSearchResults(input))
-      .then((res) => {
+      .then(res => {
         if (res) {
           dispatch(handleHistory(input));
         }

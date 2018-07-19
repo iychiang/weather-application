@@ -7,14 +7,6 @@ export function updateSearchInput(input) {
   };
 }
 
-export function preloadCity(input) {
-  return {
-    type: 'PRELOAD_CITY',
-    payload: { input }
-  }
-}
-
-
 export function getSearchResults(input) {
   return {
     type: 'GET_SEARCH_RESULTS',

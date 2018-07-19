@@ -28,13 +28,6 @@ export default function searchBarReducer(state = defaultState, action) {
       };
     }
 
-    case 'PRELOAD_CITY': {
-      return {
-        ...state,
-        input: payload.input
-      }
-    }
-
     case 'GET_SEARCH_RESULTS_FULFILLED': {
       return {
         ...state,

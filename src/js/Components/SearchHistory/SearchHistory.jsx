@@ -12,7 +12,7 @@ export default class SearchHistory extends React.Component {
         <div className='col-5'>
           <div className='card'>
             <div className='card-header'>Search History</div>
-            <div className='card-body'>
+            <div className='card-body history'>
               {history.map(item => <div className='searchhistory'>{item.input}<br/><span className='datetime'>{item.datetime}</span></div>)}
             </div>
           </div>
@@ -23,7 +23,7 @@ export default class SearchHistory extends React.Component {
         <div className='col-5'>
           <div className='card'>
             <div className='card-header'>Search History</div>
-            <div className='card-body'>
+            <div className='card-body history'>
             </div>
           </div>
         </div>
